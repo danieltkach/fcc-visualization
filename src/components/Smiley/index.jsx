@@ -3,6 +3,7 @@ import './styles.css';
 import { BackgroundCircle } from '../BackgroundCircle';
 import { Eyes } from '../Eyes';
 import { Mouth } from '../Mouth';
+import { FaceContainer } from '../FaceContainer';
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -15,25 +16,19 @@ const eyeRadius = 45;
 const mouthWidth = 20;
 const mouthRadius = 140;
 
-const Smiley = () => {
-	return (
+export const Smiley = () => (
 		<div className="Smiley">
-			<svg width={width} height={height}>
-				<g transform={`translate(${centerX},${centerY})`}>
-					<BackgroundCircle radius={centerY - strokeWidth / 2} strokeWidth={strokeWidth} />
-					<Eyes
-						eyeOffsetX={eyeOffsetX}
-						eyeOffsetY={eyeOffsetY}
-						eyeRadius={eyeRadius}
-					/>
-					<Mouth
-						mouthWidth={mouthWidth}
-						mouthRadius={mouthRadius}
-					/>
-				</g>
-			</svg>
+			<FaceContainer width={width} height={height} centerX={centerX} centerY={centerY}>
+				<BackgroundCircle radius={centerY - strokeWidth / 2} strokeWidth={strokeWidth} />
+				<Eyes
+					eyeOffsetX={eyeOffsetX}
+					eyeOffsetY={eyeOffsetY}
+					eyeRadius={eyeRadius}
+				/>
+				<Mouth
+					mouthWidth={mouthWidth}
+					mouthRadius={mouthRadius}
+				/>
+			</FaceContainer>
 		</div>
 	)
-}
-
-export default Smiley;

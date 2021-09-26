@@ -1,5 +1,4 @@
-export const Eyes = ({eyeOffsetX, eyeOffsetY, eyeRadius}) => {
-	return (
+export const Eyes = ({eyeOffsetX, eyeOffsetY, eyeRadius}) => (
 		<>
 			<circle
 				cx={-eyeOffsetX}
@@ -13,4 +12,3 @@ export const Eyes = ({eyeOffsetX, eyeOffsetY, eyeRadius}) => {
 			/>
 		</>
 	)
-}

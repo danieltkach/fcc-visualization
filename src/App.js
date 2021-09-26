@@ -1,14 +1,10 @@
 import './App.css';
-import Smiley from './components/Smiley';
+import { Smiley } from './components/Smiley';
 
-
-
-function App() {
+export const App =()=> {
 	return (
 		<div class="App">
 			<Smiley />
 		</div>
 	);
 }
-
-export default App;
